@@ -1,25 +1,3 @@
-/// The Elemental types that drive the Adjacency Matrix logic.
-enum MithraElement { fire, water, air, earth }
-
-/// The Suit categories for Minor Arcana.
-enum MithraSuit { wands, cups, swords, pentacles, none }
-
-/// The DNA of a Mithra Card.
-class CardMetadata {
-  final int index;
-  final String name;
-  final MithraElement element;
-  final MithraSuit suit;
-  final bool isMajor;
-
-  const CardMetadata({
-    required this.index,
-    required this.name,
-    required this.element,
-    this.suit = MithraSuit.none,
-    this.isMajor = false,
-  });
-}
 
 final Map<String, CardMetadata> mithraMetadata = {
   // --- ROWS 0 & 1: MAJOR ARCANA ---
@@ -110,4 +88,5 @@ final Map<String, CardMetadata> mithraMetadata = {
   'queen_pentacles': CardMetadata(index: 80, name: 'Queen of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
   'king_pentacles': CardMetadata(index: 81, name: 'King of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
 };
+
 
