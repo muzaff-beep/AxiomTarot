@@ -1,0 +1,113 @@
+/// The Elemental types that drive the Adjacency Matrix logic.
+enum MithraElement { fire, water, air, earth }
+
+/// The Suit categories for Minor Arcana.
+enum MithraSuit { wands, cups, swords, pentacles, none }
+
+/// The DNA of a Mithra Card.
+class CardMetadata {
+  final int index;
+  final String name;
+  final MithraElement element;
+  final MithraSuit suit;
+  final bool isMajor;
+
+  const CardMetadata({
+    required this.index,
+    required this.name,
+    required this.element,
+    this.suit = MithraSuit.none,
+    this.isMajor = false,
+  });
+}
+
+final Map<String, CardMetadata> mithraMetadata = {
+  // --- ROWS 0 & 1: MAJOR ARCANA ---
+  'fool': CardMetadata(index: 0, name: 'The Fool', element: MithraElement.air, isMajor: true),
+  'magician': CardMetadata(index: 1, name: 'The Magician', element: MithraElement.fire, isMajor: true),
+  'high_priestess': CardMetadata(index: 2, name: 'The High Priestess', element: MithraElement.water, isMajor: true),
+  'empress': CardMetadata(index: 3, name: 'The Empress', element: MithraElement.earth, isMajor: true),
+  'emperor': CardMetadata(index: 4, name: 'The Emperor', element: MithraElement.fire, isMajor: true),
+  'hierophant': CardMetadata(index: 5, name: 'The Hierophant', element: MithraElement.earth, isMajor: true),
+  'lovers': CardMetadata(index: 6, name: 'The Lovers', element: MithraElement.air, isMajor: true),
+  'chariot': CardMetadata(index: 7, name: 'The Chariot', element: MithraElement.water, isMajor: true),
+  'strength': CardMetadata(index: 8, name: 'Strength', element: MithraElement.fire, isMajor: true),
+  'hermit': CardMetadata(index: 9, name: 'The Hermit', element: MithraElement.earth, isMajor: true),
+  'wheel_fortune': CardMetadata(index: 10, name: 'Wheel of Fortune', element: MithraElement.fire, isMajor: true),
+  'justice': CardMetadata(index: 11, name: 'Justice', element: MithraElement.air, isMajor: true),
+  'hanged_man': CardMetadata(index: 12, name: 'The Hanged Man', element: MithraElement.water, isMajor: true),
+  'death': CardMetadata(index: 13, name: 'Death', element: MithraElement.water, isMajor: true),
+  'temperance': CardMetadata(index: 14, name: 'Temperance', element: MithraElement.fire, isMajor: true),
+  'devil': CardMetadata(index: 15, name: 'The Devil', element: MithraElement.earth, isMajor: true),
+  'tower': CardMetadata(index: 16, name: 'The Tower', element: MithraElement.fire, isMajor: true),
+  'star': CardMetadata(index: 17, name: 'The Star', element: MithraElement.air, isMajor: true),
+  'moon': CardMetadata(index: 18, name: 'The Moon', element: MithraElement.water, isMajor: true),
+  'sun': CardMetadata(index: 19, name: 'The Sun', element: MithraElement.fire, isMajor: true),
+  'judgement': CardMetadata(index: 20, name: 'Judgement', element: MithraElement.fire, isMajor: true),
+  'world': CardMetadata(index: 21, name: 'The World', element: MithraElement.earth, isMajor: true),
+
+  // --- ROW 2: WANDS (Fire) ---
+  'ace_wands': CardMetadata(index: 26, name: 'Ace of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'two_wands': CardMetadata(index: 27, name: 'Two of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'three_wands': CardMetadata(index: 28, name: 'Three of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'four_wands': CardMetadata(index: 29, name: 'Four of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'five_wands': CardMetadata(index: 30, name: 'Five of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'six_wands': CardMetadata(index: 31, name: 'Six of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'seven_wands': CardMetadata(index: 32, name: 'Seven of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'eight_wands': CardMetadata(index: 33, name: 'Eight of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'nine_wands': CardMetadata(index: 34, name: 'Nine of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'ten_wands': CardMetadata(index: 35, name: 'Ten of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'page_wands': CardMetadata(index: 36, name: 'Page of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'knight_wands': CardMetadata(index: 37, name: 'Knight of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'queen_wands': CardMetadata(index: 38, name: 'Queen of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+  'king_wands': CardMetadata(index: 39, name: 'King of Wands', element: MithraElement.fire, suit: MithraSuit.wands),
+
+  // --- ROW 3: CUPS (Water) ---
+  'ace_cups': CardMetadata(index: 40, name: 'Ace of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'two_cups': CardMetadata(index: 41, name: 'Two of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'three_cups': CardMetadata(index: 42, name: 'Three of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'four_cups': CardMetadata(index: 43, name: 'Four of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'five_cups': CardMetadata(index: 44, name: 'Five of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'six_cups': CardMetadata(index: 45, name: 'Six of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'seven_cups': CardMetadata(index: 46, name: 'Seven of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'eight_cups': CardMetadata(index: 47, name: 'Eight of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'nine_cups': CardMetadata(index: 48, name: 'Nine of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'ten_cups': CardMetadata(index: 49, name: 'Ten of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'page_cups': CardMetadata(index: 50, name: 'Page of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'knight_cups': CardMetadata(index: 51, name: 'Knight of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'queen_cups': CardMetadata(index: 52, name: 'Queen of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+  'king_cups': CardMetadata(index: 53, name: 'King of Cups', element: MithraElement.water, suit: MithraSuit.cups),
+
+  // --- ROW 4: SWORDS (Air) ---
+  'ace_swords': CardMetadata(index: 54, name: 'Ace of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'two_swords': CardMetadata(index: 55, name: 'Two of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'three_swords': CardMetadata(index: 56, name: 'Three of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'four_swords': CardMetadata(index: 57, name: 'Four of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'five_swords': CardMetadata(index: 58, name: 'Five of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'six_swords': CardMetadata(index: 59, name: 'Six of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'seven_swords': CardMetadata(index: 60, name: 'Seven of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'eight_swords': CardMetadata(index: 61, name: 'Eight of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'nine_swords': CardMetadata(index: 62, name: 'Nine of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'ten_swords': CardMetadata(index: 63, name: 'Ten of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'page_swords': CardMetadata(index: 64, name: 'Page of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'knight_swords': CardMetadata(index: 65, name: 'Knight of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'queen_swords': CardMetadata(index: 66, name: 'Queen of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+  'king_swords': CardMetadata(index: 67, name: 'King of Swords', element: MithraElement.air, suit: MithraSuit.swords),
+
+  // --- ROW 5: PENTACLES (Earth) ---
+  'ace_pentacles': CardMetadata(index: 68, name: 'Ace of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'two_pentacles': CardMetadata(index: 69, name: 'Two of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'three_pentacles': CardMetadata(index: 70, name: 'Three of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'four_pentacles': CardMetadata(index: 71, name: 'Four of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'five_pentacles': CardMetadata(index: 72, name: 'Five of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'six_pentacles': CardMetadata(index: 73, name: 'Six of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'seven_pentacles': CardMetadata(index: 74, name: 'Seven of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'eight_pentacles': CardMetadata(index: 75, name: 'Eight of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'nine_pentacles': CardMetadata(index: 76, name: 'Nine of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'ten_pentacles': CardMetadata(index: 77, name: 'Ten of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'page_pentacles': CardMetadata(index: 78, name: 'Page of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'knight_pentacles': CardMetadata(index: 79, name: 'Knight of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'queen_pentacles': CardMetadata(index: 80, name: 'Queen of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+  'king_pentacles': CardMetadata(index: 81, name: 'King of Pentacles', element: MithraElement.earth, suit: MithraSuit.pentacles),
+};
+
