@@ -1,0 +1,61 @@
+const Map<int, CardMetadata> pasoorMetadataMap = {
+  // HEARTS (Suit 0: Index 0-12)
+  0: CardMetadata(id: 'pasoor-ace-hearts', mathValue: 1, points: 1, labelFa: 'تک دل'),
+  1: CardMetadata(id: 'pasoor-2-hearts', mathValue: 2, points: 0, labelFa: 'دو دل'),
+  2: CardMetadata(id: 'pasoor-3-hearts', mathValue: 3, points: 0, labelFa: 'سه دل'),
+  3: CardMetadata(id: 'pasoor-4-hearts', mathValue: 4, points: 0, labelFa: 'چهار دل'),
+  4: CardMetadata(id: 'pasoor-5-hearts', mathValue: 5, points: 0, labelFa: 'پنج دل'),
+  5: CardMetadata(id: 'pasoor-6-hearts', mathValue: 6, points: 0, labelFa: 'شش دل'),
+  6: CardMetadata(id: 'pasoor-7-hearts', mathValue: 7, points: 0, labelFa: 'هفت دل'),
+  7: CardMetadata(id: 'pasoor-8-hearts', mathValue: 8, points: 0, labelFa: 'هشت دل'),
+  8: CardMetadata(id: 'pasoor-9-hearts', mathValue: 9, points: 0, labelFa: 'نه دل'),
+  9: CardMetadata(id: 'pasoor-10-hearts', mathValue: 10, points: 0, labelFa: 'ده دل'),
+  10: CardMetadata(id: 'pasoor-jack-hearts', mathValue: 11, points: 1, labelFa: 'سرباز دل'),
+  11: CardMetadata(id: 'pasoor-queen-hearts', mathValue: 12, points: 0, labelFa: 'بی‌بی دل'),
+  12: CardMetadata(id: 'pasoor-king-hearts', mathValue: 13, points: 0, labelFa: 'شاه دل'),
+
+  // SPADES (Suit 1: Index 13-25)
+  13: CardMetadata(id: 'pasoor-ace-spades', mathValue: 1, points: 1, labelFa: 'تک پیک'),
+  14: CardMetadata(id: 'pasoor-2-spades', mathValue: 2, points: 0, labelFa: 'دو پیک'),
+  15: CardMetadata(id: 'pasoor-3-spades', mathValue: 3, points: 0, labelFa: 'سه پیک'),
+  16: CardMetadata(id: 'pasoor-4-spades', mathValue: 4, points: 0, labelFa: 'چهار پیک'),
+  17: CardMetadata(id: 'pasoor-5-spades', mathValue: 5, points: 0, labelFa: 'پنج پیک'),
+  18: CardMetadata(id: 'pasoor-6-spades', mathValue: 6, points: 0, labelFa: 'شش پیک'),
+  19: CardMetadata(id: 'pasoor-7-spades', mathValue: 7, points: 0, labelFa: 'هفت پیک'),
+  20: CardMetadata(id: 'pasoor-8-spades', mathValue: 8, points: 0, labelFa: 'هشت پیک'),
+  21: CardMetadata(id: 'pasoor-9-spades', mathValue: 9, points: 0, labelFa: 'نه پیک'),
+  22: CardMetadata(id: 'pasoor-10-spades', mathValue: 10, points: 0, labelFa: 'ده پیک'),
+  23: CardMetadata(id: 'pasoor-jack-spades', mathValue: 11, points: 1, labelFa: 'سرباز پیک'),
+  24: CardMetadata(id: 'pasoor-queen-spades', mathValue: 12, points: 0, labelFa: 'بی‌بی پیک'),
+  25: CardMetadata(id: 'pasoor-king-spades', mathValue: 13, points: 0, labelFa: 'شاه پیک'),
+
+  // DIAMONDS (Suit 2: Index 26-38)
+  26: CardMetadata(id: 'pasoor-ace-diamonds', mathValue: 1, points: 1, labelFa: 'تک خشت'),
+  27: CardMetadata(id: 'pasoor-2-diamonds', mathValue: 2, points: 0, labelFa: 'دو خشت'),
+  28: CardMetadata(id: 'pasoor-3-diamonds', mathValue: 3, points: 0, labelFa: 'سه خشت'),
+  29: CardMetadata(id: 'pasoor-4-diamonds', mathValue: 4, points: 0, labelFa: 'چهار خشت'),
+  30: CardMetadata(id: 'pasoor-5-diamonds', mathValue: 5, points: 0, labelFa: 'پنج خشت'),
+  31: CardMetadata(id: 'pasoor-6-diamonds', mathValue: 6, points: 0, labelFa: 'شش خشت'),
+  32: CardMetadata(id: 'pasoor-7-diamonds', mathValue: 7, points: 0, labelFa: 'هفت خشت'),
+  33: CardMetadata(id: 'pasoor-8-diamonds', mathValue: 8, points: 0, labelFa: 'هشت خشت'),
+  34: CardMetadata(id: 'pasoor-9-diamonds', mathValue: 9, points: 0, labelFa: 'نه خشت'),
+  35: CardMetadata(id: 'pasoor-10-diamonds', mathValue: 10, points: 3, labelFa: 'ده خشت'), // High Value
+  36: CardMetadata(id: 'pasoor-jack-diamonds', mathValue: 11, points: 1, labelFa: 'سرباز خشت'),
+  37: CardMetadata(id: 'pasoor-queen-diamonds', mathValue: 12, points: 0, labelFa: 'بی‌بی خشت'),
+  38: CardMetadata(id: 'pasoor-king-diamonds', mathValue: 13, points: 0, labelFa: 'شاه خشت'),
+
+  // CLUBS (Suit 3: Index 39-51)
+  39: CardMetadata(id: 'pasoor-ace-clubs', mathValue: 1, points: 1, labelFa: 'تک خاج'),
+  40: CardMetadata(id: 'pasoor-2-clubs', mathValue: 2, points: 2, labelFa: 'دو خاج'), // High Value
+  41: CardMetadata(id: 'pasoor-3-clubs', mathValue: 3, points: 0, labelFa: 'سه خاج'),
+  42: CardMetadata(id: 'pasoor-4-clubs', mathValue: 4, points: 0, labelFa: 'چهار خاج'),
+  43: CardMetadata(id: 'pasoor-5-clubs', mathValue: 5, points: 0, labelFa: 'پنج خاج'),
+  44: CardMetadata(id: 'pasoor-6-clubs', mathValue: 6, points: 0, labelFa: 'شش خاج'),
+  45: CardMetadata(id: 'pasoor-7-clubs', mathValue: 7, points: 0, labelFa: 'هفت خاج'),
+  46: CardMetadata(id: 'pasoor-8-clubs', mathValue: 8, points: 0, labelFa: 'هشت خاج'),
+  47: CardMetadata(id: 'pasoor-9-clubs', mathValue: 9, points: 0, labelFa: 'نه خاج'),
+  48: CardMetadata(id: 'pasoor-10-clubs', mathValue: 10, points: 0, labelFa: 'ده خاج'),
+  49: CardMetadata(id: 'pasoor-jack-clubs', mathValue: 11, points: 1, labelFa: 'سرباز خاج'),
+  50: CardMetadata(id: 'pasoor-queen-clubs', mathValue: 12, points: 0, labelFa: 'بی‌بی خاج'),
+  51: CardMetadata(id: 'pasoor-king-clubs', mathValue: 13, points: 0, labelFa: 'شاه خاج'),
+};
